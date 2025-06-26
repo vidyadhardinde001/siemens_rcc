@@ -1,4 +1,10 @@
+libjpeg-dev
+zlib1g-dev
+libfreetype6-dev
+liblcms2-dev
+libopenjp2-7-dev
+libtiff5-dev
+libwebp-dev
 libgl1
-libglib2.0-0
 tesseract-ocr
 poppler-utils
