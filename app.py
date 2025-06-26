@@ -1,4 +1,10 @@
-import cv2
+try:
+    import cv2
+except ImportError:
+    import sys
+    import subprocess
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "opencv-python-headless"])
+    import cv2
 import pytesseract
 import pandas as pd
 from difflib import SequenceMatcher
