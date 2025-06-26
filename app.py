@@ -5,6 +5,16 @@ except ImportError:
     import subprocess
     subprocess.check_call([sys.executable, "-m", "pip", "install", "opencv-python-headless"])
     import cv2
+try:
+    from PIL import Image
+except ImportError:
+    subprocess.run([
+        sys.executable, "-m", "pip", "install", 
+        "--force-reinstall", 
+        "--no-cache-dir",
+        "Pillow==9.5.0"
+    ], check=True)
+    from PIL import Image
 import pytesseract
 import pandas as pd
 from difflib import SequenceMatcher
